@@ -1,9 +1,9 @@
 version: 0.0
 os: linux
 files:
-  - source: AspNetCoreWebApplication/bin/release/netcoreapp3.1/
+  - source: HotelKalafiornia/bin/release/netcoreapp3.1/
     destination: /home/ec2-user/aspnetcoreapp
-  - source: AspNetCoreWebApplication/wwwroot/
+  - source: HotelKalafiornia/wwwroot/
     destination: /home/ec2-user/aspnetcoreapp/wwwroot
   - source: scripts/virtualhost.conf
     destination: /home/ec2-user/aspnetcoreapp
