@@ -9,4 +9,8 @@
     <PackageReference Include="awssdk.extensions.netcore.setup" Version="3.7.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MovieRankContracts\MovieRank.Contracts.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MovieRankContracts
+namespace MovieRank.Contracts
 {
     public class MovieUpdateRequest
     {

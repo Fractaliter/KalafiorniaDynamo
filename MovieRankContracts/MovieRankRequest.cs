@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MovieRankContracts
+namespace MovieRank.Contracts
 {
     public class MovieRankRequest
     {

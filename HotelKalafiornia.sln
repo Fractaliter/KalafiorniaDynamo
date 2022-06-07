@@ -6,9 +6,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelKalafiornia", "HotelKa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelKalafiorniaTest", "HotelKalafiorniaTest\HotelKalafiorniaTest.csproj", "{326B2DBC-CDF5-4581-99A7-8C1A9F41E5AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRank.Libs", "MovieRank.Libs\MovieRank.Libs.csproj", "{670E9949-00B8-4369-9CC2-6A3B5FF82BC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieRank.Libs", "MovieRank.Libs\MovieRank.Libs.csproj", "{670E9949-00B8-4369-9CC2-6A3B5FF82BC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRankContracts", "MovieRankContracts\MovieRankContracts.csproj", "{70941F59-2831-4931-AE77-41F54106A775}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieRank.Contracts", "MovieRankContracts\MovieRank.Contracts.csproj", "{70941F59-2831-4931-AE77-41F54106A775}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

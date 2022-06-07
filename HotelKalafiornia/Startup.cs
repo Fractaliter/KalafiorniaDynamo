@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Amazon;
 using Amazon.DynamoDBv2;
 using Amazon.Extensions.NETCore.Setup;
+using HotelKalafiornia.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -13,6 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MovieRank.Libs.Mappers;
 
 namespace HotelKalafiornia
 {
@@ -30,6 +32,9 @@ namespace HotelKalafiornia
         {
             services.AddControllers();
             services.AddAWSService<IAmazonDynamoDB>();
+            services.AddSingleton<IMovieRankService, MovieRankService>();
+            services.AddSingleton<IMovieRankRepository, MovieRankRepository>();
+            services.AddSingleton<IMapper, Mapper>();
             services.AddDefaultAWSOptions(
                new AWSOptions
                {
