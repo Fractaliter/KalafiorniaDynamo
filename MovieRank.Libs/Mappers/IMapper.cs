@@ -10,5 +10,6 @@ namespace MovieRank.Libs.Mappers
     {
         IEnumerable<MovieResponse> ToMovieContract(IEnumerable<MovieDb> items);
         MovieResponse ToMovieContract(MovieDb movie);
+        MovieDb ToMovieDBModel(int userId, MovieRankRequest movieRankRequest);
     }
 }

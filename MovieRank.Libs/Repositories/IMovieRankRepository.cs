@@ -9,5 +9,8 @@ namespace HotelKalafiornia.Services
     public interface IMovieRankRepository
     {
         Task<IEnumerable<MovieDb>> GetAllItems();
+        Task<MovieDb> GetMovie(int userId, string MovieName);
+        Task<IEnumerable<MovieDb>> GetUsersRankedMoviesbyMovieTitle(int userId, string MovieName);
+        Task AddMovie(MovieDb movieDb);
     }
 }
