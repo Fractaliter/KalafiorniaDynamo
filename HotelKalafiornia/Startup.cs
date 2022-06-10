@@ -6,6 +6,7 @@ using Amazon;
 using Amazon.DynamoDBv2;
 using Amazon.Extensions.NETCore.Setup;
 using HotelKalafiornia.Services;
+using HotelKalafiornia.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -14,6 +15,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
 using MovieRank.Libs.Mappers;
 using JavaScriptEngineSwitcher.V8;
 using JavaScriptEngineSwitcher.Extensions.MsDependencyInjection;
@@ -34,7 +36,18 @@ namespace HotelKalafiornia
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddReact();
+            string connection;
+            // if(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
 
+            connection = @"data source=localhost;initial catalog=HotelKalafiorniaDB;persist security info=True;user id=sa;password=ergo.1234;MultipleActiveResultSets=True;App=EntityFramework";
+
+
+            services.AddDbContext<BloggingContext>
+            (options => options.UseSqlServer(connection));
+            services.AddDbContext<HotelContext>
+           (options => options.UseSqlServer(connection));
+            services.BuildServiceProvider().GetService<HotelContext>().Database.Migrate();
+            services.BuildServiceProvider().GetService<BloggingContext>().Database.Migrate();
             // Make sure a JS engine is registered, or you will get an error!
             services.AddJsEngineSwitcher(options => options.DefaultEngineName = V8JsEngine.EngineName)
               .AddV8();
@@ -49,7 +62,7 @@ namespace HotelKalafiornia
                new AWSOptions
                {
                    Region = RegionEndpoint.GetBySystemName("eu-central-1")
-               });
+               }); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
