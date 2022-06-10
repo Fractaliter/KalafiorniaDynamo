@@ -47,7 +47,7 @@ namespace MovieRank.Libs.Mappers
                 MovieName = movieDbRequest.MovieName,
                 Description = movieDbRequest.Description,
                 Actors = movieDbRequest.Actors,
-                Ranking = movieDbRequest.Ranking,
+                Ranking = request.Ranking,
                 RankedDateTime = DateTime.UtcNow.ToString()
 
             };

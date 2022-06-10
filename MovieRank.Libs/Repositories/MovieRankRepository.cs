@@ -48,5 +48,14 @@ namespace HotelKalafiornia.Services
         {
             await _context.SaveAsync(movieDb);
         }
+        public async Task<IEnumerable<MovieDb>> GetMovieRank(string MovieName)
+        {
+            var config = new DynamoDBOperationConfig
+            {
+                IndexName = "MovieName-index"
+            };
+            return await _context.QueryAsync<MovieDb>(MovieName, config).GetRemainingAsync();
+        }
+
     }
 }

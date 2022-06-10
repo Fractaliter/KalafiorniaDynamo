@@ -53,5 +53,12 @@ namespace HotelKalafiornia.Controllers
             await _movieRankService.UpdateMovie(userId, request);
             return Ok();
         }
+        [HttpGet]
+        [Route("{movieName}/ranking")]
+        public async Task<MovieResponse> GetMoviesRanking(string movieName)
+        {
+            var results = await _movieRankService.GetMovieRank(movieName);
+            return results;
+        }
     }
 }

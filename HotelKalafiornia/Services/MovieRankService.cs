@@ -48,5 +48,16 @@ namespace HotelKalafiornia.Services
             var movieDB = _mapper.ToMovieDBModel(userId, response, request);
             await _movieRankRepository.UpdateMovie(movieDB);
         }
+        public async Task<MovieRankResponse> GetMovieRank(string movieName)
+        {
+
+            var response = await _movieRankRepository.GetMovieRank(movieName);
+            var overrallMovieRanking = Math.Round(response.Select(x => x.Ranking).Average());
+            return new MovieRankResponse
+            {
+                MovieName = movieName,
+                OverrallRanking = overrallMovieRanking
+            };
+        }
     }
 }
