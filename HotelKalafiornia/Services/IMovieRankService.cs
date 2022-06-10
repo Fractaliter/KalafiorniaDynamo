@@ -14,5 +14,6 @@ namespace HotelKalafiornia.Services
         Task<IEnumerable<MovieResponse>> GetUsersRankedMoviesbyMovieTitle(int userId, string movieName);
         Task AddMovie(int userId, MovieRankRequest movieRankRequest);
         Task UpdateMovie(int userId, MovieUpdateRequest movieUpdateRequest);
+        Task<MovieRankResponse> GetMovieRank(string movieName);
     }
 }

@@ -55,7 +55,7 @@ namespace HotelKalafiornia.Controllers
         }
         [HttpGet]
         [Route("{movieName}/ranking")]
-        public async Task<MovieResponse> GetMoviesRanking(string movieName)
+        public async Task<MovieRankResponse> GetMoviesRanking(string movieName)
         {
             var results = await _movieRankService.GetMovieRank(movieName);
             return results;
