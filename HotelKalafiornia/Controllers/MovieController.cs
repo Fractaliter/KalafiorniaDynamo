@@ -46,5 +46,12 @@ namespace HotelKalafiornia.Controllers
             await _movieRankService.AddMovie(userId, movieRankRequest);
             return Ok();
         }
+        [HttpPatch]
+        [Route("{userId}")]
+        public async Task<IActionResult> UpdateMovie(int userId, [FromBody] MovieUpdateRequest request)
+        {
+            await _movieRankService.UpdateMovie(userId, request);
+            return Ok();
+        }
     }
 }

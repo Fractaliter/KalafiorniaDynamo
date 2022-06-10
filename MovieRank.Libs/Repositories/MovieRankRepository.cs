@@ -44,5 +44,9 @@ namespace HotelKalafiornia.Services
         {
             await _context.SaveAsync(movieDb);
         }
+        public async Task UpdateMovie(MovieDb movieDb)
+        {
+            await _context.SaveAsync(movieDb);
+        }
     }
 }

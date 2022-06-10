@@ -39,5 +39,18 @@ namespace MovieRank.Libs.Mappers
 
             };
         }
+        public MovieDb ToMovieDBModel(int userId, MovieDb movieDbRequest, MovieUpdateRequest request)
+        {
+            return new MovieDb
+            {
+                UserId = movieDbRequest.UserId,
+                MovieName = movieDbRequest.MovieName,
+                Description = movieDbRequest.Description,
+                Actors = movieDbRequest.Actors,
+                Ranking = movieDbRequest.Ranking,
+                RankedDateTime = DateTime.UtcNow.ToString()
+
+            };
+        }
     }
 }
