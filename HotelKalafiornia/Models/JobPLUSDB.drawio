@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-02T20:59:34.841Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="KwytuVih7SbxgLEKnqNS" version="20.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-02T21:02:52.127Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="3OOQileA-DiExz88T_SA" version="20.0.4" type="github">
   <diagram id="6_YGwdqM3VS4p5M6uRab" name="Page-1">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -31,10 +31,10 @@
         <mxCell id="nsvMFcYfqRVPoaCskRs0-10" value="Reviews" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
           <mxGeometry x="210" y="80" width="140" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="nsvMFcYfqRVPoaCskRs0-11" value="ReviewsId" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="nsvMFcYfqRVPoaCskRs0-10">
+        <mxCell id="nsvMFcYfqRVPoaCskRs0-11" value="ReviewId" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="nsvMFcYfqRVPoaCskRs0-10">
           <mxGeometry y="30" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="nsvMFcYfqRVPoaCskRs0-12" value="UserId" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="nsvMFcYfqRVPoaCskRs0-10">
+        <mxCell id="nsvMFcYfqRVPoaCskRs0-12" value="TutorId" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="nsvMFcYfqRVPoaCskRs0-10">
           <mxGeometry y="60" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nsvMFcYfqRVPoaCskRs0-13" value="Ranking" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="nsvMFcYfqRVPoaCskRs0-10">
@@ -52,11 +52,23 @@
         <mxCell id="nsvMFcYfqRVPoaCskRs0-29" value="UserId" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="1">
           <mxGeometry x="470" y="200" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="nsvMFcYfqRVPoaCskRs0-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nsvMFcYfqRVPoaCskRs0-12" target="nsvMFcYfqRVPoaCskRs0-7">
+        <mxCell id="nsvMFcYfqRVPoaCskRs0-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nsvMFcYfqRVPoaCskRs0-12" target="nsvMFcYfqRVPoaCskRs0-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="nsvMFcYfqRVPoaCskRs0-34" value="RankedDateTime" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="1">
           <mxGeometry x="210" y="200" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nsvMFcYfqRVPoaCskRs0-35" value="ReviewerName" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="230" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nsvMFcYfqRVPoaCskRs0-36" value="Description" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="260" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nsvMFcYfqRVPoaCskRs0-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nsvMFcYfqRVPoaCskRs0-37" target="nsvMFcYfqRVPoaCskRs0-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nsvMFcYfqRVPoaCskRs0-37" value="UserId" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="290" width="140" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
